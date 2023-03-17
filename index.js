@@ -3,9 +3,9 @@ class CoffeeMachine {
   #power;
   #capacity;
 
-  constructor() {
-    this.#power = 100;
-    this.#capacity = 4200;
+  constructor(power = 100, capacity = 100) {
+    this.#power = power;
+    this.#capacity = capacity;
   }
 
   #getTimeToBoil() {
@@ -34,6 +34,6 @@ class CoffeeMachine {
   }
 }
 
-const myCoffee = new CoffeeMachine();
+const myCoffee = new CoffeeMachine(500, 600);
 myCoffee.waterAmount = 100;
 myCoffee.run();
